@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BFCI Portal</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top "style="background-color: white">
+    <div class="container ">
+        <div class="navbar-header nav navbar-nav navbar-right ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class="imglogo img-rounded" src="~/Images/BFCILOGO.jpg"/>
+            <a class="BFCItitle"href="@Url.Action("Index","Home")"><h3>كليةالحاسبات والمعلومات</h3></a>
+        </div>
+        <div class="navbar-collapse">
+            <ul class=" navbar-right nav navbar-nav navbar-brand">
+                <li><a href="@Url.Action("Index", "Home")">الرئيسية</a></li>
+                <li class=" dropdown">
+                    <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
+                        الأقسام
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="list-group-item"><a href="@Url.Action("CS_Dept","Home")">قسم علوم الحاسب</a></li>
+                        <li class="list-group-item"><a href="@Url.Action("IS_Dept","Home")"> قسم نظم المعلومات</a></li>
+                        <li class="list-group-item"><a href="@Url.Action("SC_Dept","Home")">قسم الحوسبة العلمية</a></li>
+                        <li class="list-group-item"><a href="@Url.Action("Information_Security_Program","Home")">برنامج امن المعلومات والأدلة الجنائية </a></li>
+                        <li class="list-group-item"><a href="@Url.Action("Medical_Informatics_Program","Home")">برنامج المعلوماتية الطبية </a></li>
+
+                    </ul>
+                </li><li class=" dropdown">
+                    <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
+                        الطلاب 
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="list-group-item"><a href="#">الخدمات الطلابية</a></li>
+                        <li class="list-group-item"><a href="#">إتحاد الطلاب</a></li>
+                        <li class="list-group-item"><a href="#">الدعم والارشاد الطلابي</a></li>
+                        <li class="list-group-item"><a href="#">المدن الجامعية</a></li>
+                        <li class="list-group-item"><a href="#">التدريب الصيفي</a></li>
+                        <li class="list-group-item"><a href="#"> اماكن توزيع اللجان</a></li>
+                        <li class="list-group-item"><a href="#">الجداول الدراسية</a></li>
+                        <li class="list-group-item"><a href="#">نماذج الأجابات</a></li>
+                        <li class="list-group-item"><a href="#">منتديات الطلاب</a></li>
+                        <li class="list-group-item"><a href="#">الطلاب الوافدون</a></li>
+
+
+                    </ul>
+                </li>
+
+                <li class=" dropdown">
+                    <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
+                    هيئة التدريس</a>
+                    <ul class="dropdown-menu">
+                        <li class="list-group-item"><a href="#">مواقع أعضاء هيئة التدريس</a></li>
+                        <li class="list-group-item"><a href="#">بوابة أعضاء هيئة التدريس</a></li>
+                    </ul>
+                </li>
+                <li class=" dropdown">
+                    <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
+                        قطاعات الكلية</a>
+                    <ul class="dropdown-menu">
+                        <li class="list-group-item"><a href="@Url.Action("PostGraduate_Section","Home")">الدراسات العليا</a></li>
+
+                        <li class="list-group-item"><a  href="@Url.Action("Community_Service","Home")">خدمة المجتمع</a></li>
+
+                    </ul>
+                </li>
+                <li class=" dropdown">
+                    <a class=" dropdown-toggle" data-toggle="dropdown" href="#">
+                        وحدات ومراكز
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="list-group-item"><a href="@Url.Action("Quality_Unit","Home")">وحدة ضمان الجودة</a></li>
+
+                        <li class="list-group-item"><a href="@Url.Action("IT_Unit","Home")"> وحدة تكنولجيا المعلومات</a></li>
+                        <li class="list-group-item"><a href="#"> وحدة التخطيط الإستراتيجي</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li ><a href="#" data-target="#LoginModal" data-toggle="modal">تسجيل الدخول</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="LoginModal"class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #8b0000;color: white">
+                <a  style="float: left"href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title">برجاء تسجيل الدخول</h3>
+            </div>
+            <div id="modalbodycontent" class="modal-body">
+                <div class="form-group" style="max-width: 60%">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">كلمة السر:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> تذكرني
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">إدخل</button>
+                <button class="btn btn-danger" data-dismiss="modal">إلغاء</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container body-content ">
+
+    @RenderBody()
+    <hr/>
+    <footer class="panel-footer"style="text-align: center">
+        <p> تصميم وتطوير البوابة الإلكترونية لكلية الحاسبات والمعلومات جامعة بنها جميع الحقوق محفوظة <span style="color: red;">&copy; @DateTime.Now.Year</span></p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
+
+ 
