@@ -1,2 +1,2 @@
-# Student-Portal [Graduation Project]
-ASP.NET MVC &amp; Entity framework ( Web Application )
+# Student-Portal "Graduation Project"
+C#, ASP.NET MVC &amp; Entity framework ( Web Application )
